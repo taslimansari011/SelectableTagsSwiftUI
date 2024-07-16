@@ -1,0 +1,9 @@
+workflows:
+  SelectableTags-workflow:
+    name: SelectableTags Workflow
+    scripts:
+      - name: CICD Started
+        script: echo "Welcome to your CICD setup"
+      - name: Build ipa for distribution
+      script: |
+        # build command
