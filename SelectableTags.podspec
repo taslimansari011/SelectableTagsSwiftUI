@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'SelectableTags'  
-s.version          = '1.0'  
+s.version          = '1.0.1'  
 s.summary          = 'SelectableTags allows user to select a tag from given tags' 
 
 s.homepage         = 'https://github.com/taslimansari011/SelectableTagsSwiftUI'
