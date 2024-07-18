@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct TagView: View {
+internal struct TagView: View {
     
-    let tagName: String
     @Binding var selectedTag: String
+    let tagName: String
     let selectedTagColor: Color
     let unSelectedTagColor: Color
     let selectedTextColor: Color
@@ -33,17 +33,14 @@ struct TagView: View {
                     RoundedRectangle(cornerRadius: 6)
                         .fill(selectedTag == tagName ? selectedTagColor : unSelectedTagColor)
                     RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color(borderColor), lineWidth: 0.5)
-                }
+                        .stroke(Color(borderColor), lineWidth: 1)
+                }.padding(1)
             )
-            .onTapGesture {
-                selectedTag = tagName
-            }
     }
 }
 
 struct TagView_Previews: PreviewProvider {
     static var previews: some View {
-        TagView(tagName: "MyTag", selectedTag: .constant("MyTag"), selectedTagColor: .black, unSelectedTagColor: .white, selectedTextColor: .white, unSelectedTextColor: .black, hPadding: 10, vPadding: 10, font: .systemFont(ofSize: 14))
+        TagView(selectedTag: .constant("MyTag"), tagName: "MyTag", selectedTagColor: .black, unSelectedTagColor: .white, selectedTextColor: .white, unSelectedTextColor: .black, hPadding: 10, vPadding: 10, font: .systemFont(ofSize: 14))
     }
 }

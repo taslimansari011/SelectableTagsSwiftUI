@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct TagsViewExample: View {
-//    let tags = ["Workout Outfits", "Travel Essentials", "Sneakers", "Payday Treats", "Summer Collection"]
-    let tags = ["This", "is an example", "showing", "how to use", "TAGS VIEW", "in your code"]
+    let tags = ["This", "is an example", "showing", "how to use", "Tagssssssssssssssssssssassadsadasdsada", "TAGS VIEW", "in your code", "Selectable Tags View"]
     @State var name: String = ""
     
     var body: some View {
@@ -19,7 +18,7 @@ struct TagsViewExample: View {
                 .bold()
                 .padding()
                 .multilineTextAlignment(.center)
-            TagsView(tags: tags, selectedTag: $name)
+            TagsView(selectedTag: $name, tagsViewModel: TagsViewModel(tags: tags, font: .systemFont(ofSize: 12), selectedTagColor: .black, unSelectedTagColor: .gray.opacity(0.2),  isSingleLineScrolable: false))
             Spacer()
         }
     }
